@@ -3,12 +3,15 @@ using UnityEngine;
  
  public class Rotate : MonoBehaviour
  {
+   private bool canSpin = true;
+   [SerializeField] private KeyCode var;
+
    void Update ()
    {
-     if( Input.GetKeyDown(KeyCode.Space) )
+     if( canSpin == true && (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(var)))
      {
 
-
+      canSpin = false;
        StartCoroutine( Rotator(Vector3.up, 90, 1.0f) );
 
      }
@@ -24,8 +27,10 @@ using UnityEngine;
      {
        transform.rotation = Quaternion.Slerp(startPos, endPos, elapsed / duration );
        elapsed += Time.deltaTime;
+
        yield return null;
      }
      transform.rotation = endPos;
+     canSpin = true;
    }
  }

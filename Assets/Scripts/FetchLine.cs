@@ -13,7 +13,7 @@ public class FetchLine : MonoBehaviour
     {
         line.SetUpLine(points);
     }
-
+/*
     // Update is called once per frame
     void Update()
     {
@@ -28,16 +28,7 @@ public class FetchLine : MonoBehaviour
  
         if (Physics.Raycast(ray, out hit))
         {
-            /*
-            if (hit.collider.gameObject.name == "SidebarView"){
-
-            }
-            if (hit.collider.gameObject.name == "SearchResultsView"){
-
-            }
-            if (hit.collider.gameObject.name == "SearchFormView"){
-
-            }*/
+            
 
             Debug.Log("Clicked on " + hit.transform.name);
             highlight.SetUpLine(points);
@@ -47,4 +38,5 @@ public class FetchLine : MonoBehaviour
             Debug.Log("Nothing hit");
         }
    }
+   */
 }

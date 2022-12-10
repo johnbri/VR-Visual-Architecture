@@ -7,10 +7,14 @@ using System;
 public class ButtonController : MonoBehaviour
 {
     public Button yourButton;
-    public GameObject boll;
+    
+    [SerializeField] public Material highlightMat;
+    [SerializeField] public Material plainMat;
+    [SerializeField] public LineRenderer line1;
+    [SerializeField] public LineRenderer line2;
+
     void Start()
     {
-        Console.WriteLine("This is C#");
         Button btn = yourButton.GetComponent<Button>();
         btn.onClick.AddListener(TaskOnClick);
     }
@@ -22,8 +26,8 @@ public class ButtonController : MonoBehaviour
 
     void TaskOnClick()
     {
-        boll.SetActive(false);
-        Console.WriteLine("Click");
-        Debug.Log("You have clicked the button!");
+        line1.GetComponent<Renderer>().material = highlightMat;
+        line2.GetComponent<Renderer>().material = plainMat;
+        
     }
 }

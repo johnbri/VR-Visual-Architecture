@@ -621,7 +621,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   yourButton: {fileID: 100254841}
-  boll: {fileID: 863162247}
+  highlightMat: {fileID: 0}
+  plainMat: {fileID: 0}
+  line1: {fileID: 0}
+  line2: {fileID: 0}
 --- !u!114 &100254841
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11432,8 +11435,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 092f7e59f40d79149997a61530c4d46d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  yourButton: {fileID: 1574790706}
-  boll: {fileID: 863162247}
+  yourButton: {fileID: 100254841}
+  highlightMat: {fileID: 0}
+  plainMat: {fileID: 0}
+  line1: {fileID: 0}
+  line2: {fileID: 0}
 --- !u!1001 &1587246757
 PrefabInstance:
   m_ObjectHideFlags: 0

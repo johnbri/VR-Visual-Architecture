@@ -12,6 +12,8 @@ public class ButtonController : MonoBehaviour
     [SerializeField] public Material plainMat;
     [SerializeField] public LineRenderer line1;
     [SerializeField] public LineRenderer line2;
+    [SerializeField] public Material screenMat;
+    [SerializeField] public GameObject screen;
 
     void Start()
     {
@@ -26,6 +28,7 @@ public class ButtonController : MonoBehaviour
 
     void TaskOnClick()
     {
+        screen.GetComponent<Renderer>().material = screenMat;
         line1.GetComponent<Renderer>().material = highlightMat;
         line2.GetComponent<Renderer>().material = plainMat;
         
